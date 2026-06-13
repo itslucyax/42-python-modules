@@ -27,7 +27,7 @@ print(f"| {'Plant Name':<15} | {'Height (cm)':<12} | {'Age (days)':<10} |")
 print("-" * 49)
 
 for plant in garden_factory:
-    plant.display_info()
+    plant.show()
 
 print("-" * 49)
 
