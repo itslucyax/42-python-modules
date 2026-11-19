@@ -37,7 +37,7 @@ def inventory_system() -> None:
     least = list(inventory.keys())[0]
 
     for item in inventory:
-        percentage = (inventory[item]/sum_all)*100
+        percentage = (inventory[item] / sum_all) * 100 if sum_all else 0
         print(f"Item {item} represents "
               f"{round(percentage, 1)}%")
         if inventory[item] > inventory[most]:

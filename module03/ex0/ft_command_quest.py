@@ -9,8 +9,10 @@ def command() -> None:
         print("No arguments provided!")
     else:
         print(f"Arguments received: {argc - 1}")
-        for i in range(1, argc):
+        i = 1
+        while i < argc:
             print(f"Argument {i}: {sys.argv[i]}")
+            i += 1
     print(f"Total arguments: {argc}")
 
 
