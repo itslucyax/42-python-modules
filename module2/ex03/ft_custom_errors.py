@@ -10,7 +10,7 @@ class PlantError(GardenError):
 
 
 class WaterError(GardenError):
-    def __init__(self, message: str = "Unknown garden error") -> None:
+    def __init__(self, message: str = "Unknown water error") -> None:
         super().__init__(message)
 
 
@@ -40,11 +40,11 @@ def custom_errors() -> None:
     print("Testing catching all garden errors...")
     try:
         test_plant()
-    except PlantError as error:
+    except GardenError as error:
         print(f"Caught GardenError: {error}")
     try:
         test_water()
-    except WaterError as error:
+    except GardenError as error:
         print(f"Caught GardenError: {error}")
     print("")
 
